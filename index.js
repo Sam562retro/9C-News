@@ -4,6 +4,7 @@ const compression = require('compression');
 const helmet = require('helmet');
 const path = require('path');
 const details = require('./newsDetails');
+const serve = require('serve-favicon');
 
 app.use(helmet.dnsPrefetchControl({allow : false}));
 app.use(helmet.expectCt());
@@ -19,6 +20,7 @@ app.use(helmet.xssFilter());
 app.use(compression({level: 9, threshold: 0}));
 app.set('view engine', 'ejs')
 
+app.use(serve(path.resolve(__dirname, './media/favicon/favicon.ico')));
 app.use(express.static(path.resolve(__dirname, './media')));
 
 app.get('/', (req, res) => {
