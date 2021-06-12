@@ -1,0 +1,19 @@
+<%- include('partials/_header.ejs') %>
+<%- include('partials/_navbar.ejs') %>
+<div class="container-fluid">
+	<div class="row align-items-md-stretch">
+		<div class="col-md-12 mb-2 pt-3 pb-3">
+			<div class="h-100 p-5 text-white bg-dark rounded-3 text-center">
+				<h2>See The Whole Video</h2>
+				<p>Check Out The Whole Video Presentation In Video Form Without Scripts. Go To YouTube If Their Is Problem In Whatching The Content</p>
+				<video class="pt-4 video" controls>
+					<source src="/videos/vid2.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<br>
+				<button class="btn btn-outline-light mt-3" onclick="location.href='/'">Whatch On Youtube</button>
+			</div>
+		</div>
+	</div>
+</div>
+<%- include('partials/_footer.ejs') %>
